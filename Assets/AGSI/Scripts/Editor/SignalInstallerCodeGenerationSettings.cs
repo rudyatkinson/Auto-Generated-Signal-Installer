@@ -39,7 +39,7 @@ namespace RudyAtkinson.GenerateCode
         {
             var settingsFilePath = Path.Combine("./Assets/Resources/", "AGSI_Settings.json");
 
-            var settings = new Settings();
+            var settings = new AGSISettings();
             settings.InstallerClassName = InstallerClassName;
             settings.InstallerPath = InstallerPath;
             settings.GenerateSignalInstallerAtCompile = GenerateSignalInstallerAtCompile;
@@ -61,15 +61,15 @@ namespace RudyAtkinson.GenerateCode
             GenerateSignalInstallerAtCompile = settings.GenerateSignalInstallerAtCompile;
         }
 
-        public static Settings GetSettingsFromResources()
+        public static AGSISettings GetSettingsFromResources()
         {
             var settingsTextAsset = (TextAsset)Resources.Load("AGSI_Settings");
             var settingsJson = settingsTextAsset.text;
-            var settings = JsonUtility.FromJson<Settings>(settingsJson);
+            var settings = JsonUtility.FromJson<AGSISettings>(settingsJson);
             
             if (settings == null)
             {
-                settings = new Settings();
+                settings = new AGSISettings();
                 settings.InstallerClassName = InstallerClassName;
                 settings.InstallerPath = InstallerPath;
                 settings.GenerateSignalInstallerAtCompile = GenerateSignalInstallerAtCompile;
@@ -79,7 +79,7 @@ namespace RudyAtkinson.GenerateCode
         }
     }
     
-    public class Settings
+    public class AGSISettings
     {
         public string InstallerClassName;
         public string InstallerPath;

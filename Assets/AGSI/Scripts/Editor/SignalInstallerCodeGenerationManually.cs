@@ -11,7 +11,9 @@ namespace RudyAtkinson.GenerateCode
         [MenuItem("Tools/RudyAtkinson/Signal Installer Generator/Generate Signal Installer")]
         public static void GenerateSignalInstaller()
         {
-            SignalInstallerCodeGeneration.FindSignalsAndGenerateCode();
+            var settings = SignalInstallerCodeGenerationSettings.GetSettingsFromResources();
+
+            SignalInstallerCodeGeneration.FindSignalsAndGenerateCode(settings);
         }
     }
 }
