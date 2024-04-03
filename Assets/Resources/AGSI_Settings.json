@@ -1,0 +1,5 @@
+{
+    "InstallerClassName": "SignalInstaller",
+    "InstallerPath": "../Assets/SampleInstaller/",
+    "GenerateSignalInstallerAtCompile": false
+}
