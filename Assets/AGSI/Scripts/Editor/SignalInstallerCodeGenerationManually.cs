@@ -1,14 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEditor;
 
-namespace RudyAtkinson.GenerateCode
+namespace RudyAtkinson.AGSI.Editor
 {
     public class SignalInstallerCodeGenerationManually : EditorWindow
     {
-        [MenuItem("Tools/RudyAtkinson/Signal Installer Generator/Generate Signal Installer")]
+        [MenuItem("Tools/RudyAtkinson/AGSI/Generate Signal Installer Manually")]
         public static void GenerateSignalInstaller()
         {
             var settings = SignalInstallerCodeGenerationSettings.GetSettingsFromResources();

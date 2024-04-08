@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace RudyAtkinson.GenerateCode
+namespace RudyAtkinson.AGSI.Editor
 {
     public class SignalInstallerCodeGenerationSettings: EditorWindow
     {
@@ -10,10 +10,10 @@ namespace RudyAtkinson.GenerateCode
         public static string InstallerPath = "../Assets/Installer/";
         public static bool GenerateSignalInstallerAtCompile = true;
         
-        [MenuItem("Tools/RudyAtkinson/Signal Installer Generator/Settings")]
+        [MenuItem("Tools/RudyAtkinson/AGSI/Settings")]
         public static void OpenWindow()
         {
-            GetWindow<SignalInstallerCodeGenerationSettings>("Signal Installer Generator").Show();
+            GetWindow<SignalInstallerCodeGenerationSettings>("AGSI").Show();
         }
 
         private void OnEnable()
@@ -64,17 +64,21 @@ namespace RudyAtkinson.GenerateCode
         public static AGSISettings GetSettingsFromResources()
         {
             var settingsTextAsset = (TextAsset)Resources.Load("AGSI_Settings");
-            var settingsJson = settingsTextAsset.text;
-            var settings = JsonUtility.FromJson<AGSISettings>(settingsJson);
+            AGSISettings settings;
             
-            if (settings == null)
+            if (settingsTextAsset == null)
             {
                 settings = new AGSISettings();
                 settings.InstallerClassName = InstallerClassName;
                 settings.InstallerPath = InstallerPath;
                 settings.GenerateSignalInstallerAtCompile = GenerateSignalInstallerAtCompile;
             }
-
+            else
+            {
+                var settingsJson = settingsTextAsset.text;
+                settings = JsonUtility.FromJson<AGSISettings>(settingsJson);
+            }
+            
             return settings;
         }
     }

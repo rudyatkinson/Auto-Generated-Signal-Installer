@@ -1,10 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using RudyAtkinson.AGSI.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace RudyAtkinson.GenerateCode
+namespace RudyAtkinson.AGSI.Editor
 {
     [InitializeOnLoad]
     public static class SignalInstallerCodeGeneration
@@ -53,13 +54,19 @@ namespace RudyAtkinson.GenerateCode
                             namespaceBuilder.Append($"using {type.Namespace};\n");
                         }
                         
-                        Debug.Log($"Class '{type.Name}' found and added into {settings.InstallerClassName}");
+                        Debug.Log($"[AGSI] Class '{type.Name}' found and added into {settings.InstallerClassName}");
                     }
                 }
                 catch (Exception)
                 {
                     continue;
                 }
+            }
+
+            if (string.IsNullOrEmpty(declareSignalBuilder.ToString()))
+            {
+                Debug.Log($"[AGSI] Cannot found any signal.");
+                return;
             }
             
             string classContent = 
