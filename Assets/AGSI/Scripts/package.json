@@ -1,6 +1,6 @@
 ﻿{
   "name": "com.rudyatkinson.agsi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Bilal Aydin",
   "displayName": "AGSI",
   "description": "Bind signals automatically at editor compile.",
@@ -8,7 +8,7 @@
     {
       "displayName": "Sample",
       "description": "Contains basic AGSI sample.",
-      "path": "Samples~"
+      "path": "Samples~/BasicSample"
     }
   ]
 }

@@ -9,3 +9,7 @@
 - Fixed: Settings load logic.
 - Fixed: Ignored signal installer auto generation if there are no signals that implement IAutoGenerateSignal.
 - Added: Basic sample.
+
+## 1.0.2
+
+- Fixed: Sample folder moved.
