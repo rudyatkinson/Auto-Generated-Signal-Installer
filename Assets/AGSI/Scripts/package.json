@@ -1,7 +1,8 @@
 ﻿{
   "name": "com.rudyatkinson.agsi",
-  "version": "1.0.0",
-  "displayName": "AGSI - Auto Generated Signal Installer",
+  "version": "1.0.1",
+  "author": "Bilal Aydin",
+  "displayName": "AGSI",
   "description": "Bind signals automatically at editor compile.",
   "samples": [
     {
