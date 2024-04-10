@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 using RudyAtkinson.AGSI.Runtime;
 using UnityEditor;
@@ -35,6 +36,13 @@ namespace RudyAtkinson.AGSI.Editor
             var declareSignalBuilder = new StringBuilder();
             foreach (var assembly in assemblies)
             {
+                // var isTestAssembly = assembly.GetReferencedAssemblies().Any(referencedAssembly => referencedAssembly.Name == "nunit.framework");
+                // if (isTestAssembly)
+                // {
+                //     Debug.Log($"[AAA] {assembly.Location} skipped");
+                //     return;
+                // }
+
                 try
                 {
                     Type[] types = assembly.GetTypes();

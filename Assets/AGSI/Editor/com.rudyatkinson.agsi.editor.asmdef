@@ -1,7 +1,9 @@
 {
-    "name": "com.rudyatkinson.agsi",
+    "name": "com.rudyatkinson.agsi.editor",
     "rootNamespace": "RudyAtkinson",
-    "references": [],
+    "references": [
+        "GUID:5763ae87c4a12054cb9c5aa7d390e2b8"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
