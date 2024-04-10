@@ -13,12 +13,12 @@ Support plugin to automate signal binding.
 1. Navigate to your project's Packages folder and open the manifest.json file.
 2. Add this line below the "dependencies": { line
     - ```json title="Packages/manifest.json"
-      "com.rudyatkinson.agsi": "https://github.com/rudyatkinson/Auto-Generated-Signal-Installer.git?path=Assets/AGSI/Scripts",
+      "com.rudyatkinson.agsi": "https://github.com/rudyatkinson/Auto-Generated-Signal-Installer.git?path=Assets/AGSI",
       ```
 
     or you can use UPM directly, 
     ```
-      https://github.com/rudyatkinson/Auto-Generated-Signal-Installer.git?path=Assets/AGSI/Scripts
+      https://github.com/rudyatkinson/Auto-Generated-Signal-Installer.git?path=Assets/AGSI
       ```
     
 3. UPM should now install the package.
