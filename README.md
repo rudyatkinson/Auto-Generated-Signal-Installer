@@ -17,7 +17,7 @@ Support plugin to automate signal binding.
       ```
 
     or you can use UPM directly, 
-    ```
+    - ```
       https://github.com/rudyatkinson/Auto-Generated-Signal-Installer.git?path=Assets/AGSI
       ```
     
@@ -37,6 +37,11 @@ public class ASignal : IAutoGenerateSignal
 2. AGSI will automatically detect and create a signal installer in the default path (Assets/Installer).
 3. Further, you can customize the installer path and signal installer class name, or disable automatic code generation and generate the signal installer manually.
 4. At the last step, you must add the signal installer as a component into the context.
+
+You can change installer path and name in the settings.
+
+![image](https://github.com/rudyatkinson/Auto-Generated-Signal-Installer/assets/54232905/516d771b-38c9-4ac9-abfd-2e4ea0465a7f)
+![image](https://github.com/rudyatkinson/Auto-Generated-Signal-Installer/assets/54232905/4a2a2d84-a070-4edb-9cc5-9dfda8321dab)
 
 ## License
 
